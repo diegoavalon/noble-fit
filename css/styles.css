@@ -4,6 +4,7 @@ body	{
 
 .container {
 	border: 1px #eee solid;
+	padding: 0;
 }
 
 h1, h2, h3, h4, h5, p {
@@ -18,40 +19,32 @@ a:hover {
 	text-decoration: none;
 }
 
-#splash {
+/*	TYPESETTINGS OVERRIDES	*/
+
+.typesettings {
+	padding: 0; 
+}
+
+/*	TYPESETTINGS END*/
+
+
+.splash {
 	background: linear-gradient(
 			rgba(74,73,74,0.60),
 			rgba(74,73,74,0.60)
 			), url(../images/hero-bg.jpg) no-repeat center center;
 	background-size: cover;
-	display: -webkit-flex;
-	display: flex;
-	-webkit-flex-direction: column;
-  flex-direction: column;
-  -webkit-align-items: center;
-  align-items: center;
-  -webkit-justify-content: center;
-  justify-content: center;
 }
 
 .intro {
-	display: -webkit-flex;
-	display: flex;
-	-webkit-flex-direction: column;
-  flex-direction: column;
-  -webkit-align-items: center;
-  align-items: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  margin-top: -100px;
-  max-width: 600px;
 	text-align: center;
-	padding: 200px 0;
+	padding-top: 200px;
+	padding-bottom: 460px;
 }
 
 .intro img {
 	height: 130px;
-	margin-top: 100px;
+	margin-bottom: 40px;
 }
 
 .intro h1 {
@@ -88,23 +81,42 @@ a:hover {
 	text-decoration: none;
 }
 
+.btn-yellow:hover {
+	background: #FCAE10;
+}
+
 /*     DASHBOARD      */
 
 .nav {
 	height: 100px;
 	width: 100%;
+	margin: 0 auto;
 	box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.50);
+}
+
+.dashboard-container {
+		display: -webkit-flex;
+		display: flex;
+		-webkit-flex-direction: row;
+	  flex-direction: row;
+	  -webkit-align-items: center;
+	  align-items: center;
+	  -webkit-justify-content: center;
+	  justify-content: center;
+		height: 115px;
+		width: 100%;
+		overflow: visible;
 }
 
 .nav-container {
 	display: -webkit-flex;
 	display: flex;
-	-webkit-flex-direction: column;
-  flex-direction: column;
+	-webkit-flex-direction: row;
+  flex-direction: row;
   -webkit-align-items: center;
   align-items: center;
-  -webkit-justify-content: center;
-  justify-content: center;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
 	height: 115px;
 	width: 100%;
 	overflow: visible;
@@ -118,113 +130,106 @@ a:hover {
 	height: 100px;
 }
 
-#dashboard .row {
-	margin-top: 30px;
+.dashboard-content {
+	padding: 55px 0 40px 0;
 }
+
+.dashboard-content .row {
+	margin-bottom: 30px;
+}
+
+.socks {
+	background: linear-gradient(
+			rgba(0,0,0,0.40),
+			rgba(0,0,0,0.40)
+			),url(../images/socks.jpg)no-repeat center center;
+}
+
+.gloves {
+	background: linear-gradient(
+			rgba(0,0,0,0.40),
+			rgba(0,0,0,0.40)
+			),url(../images/gloves.jpg) no-repeat center center;
+}
+
+.belts {
+	background: linear-gradient(
+			rgba(0,0,0,0.40),
+			rgba(0,0,0,0.40)
+			),url(../images/belts.jpg) no-repeat center center;
+}
+
+.breeches {
+	background: linear-gradient(
+			rgba(0,0,0,0.40),
+			rgba(0,0,0,0.40)
+			),url(../images/breeches.jpg) no-repeat center center;
+}
+
+.tops-outerwear {
+	background: linear-gradient(
+			rgba(0,0,0,0.40),
+			rgba(0,0,0,0.40)
+			),url(../images/tops-outerwear.jpg) no-repeat center center;
+}
+
+.panel {
+	display: -webkit-flex;
+	display: flex;
+	-webkit-flex-direction: column;
+	flex-direction: column;
+	-webkit-align-items: center;
+	align-items: center;
+	-webkit-justify-content: center;
+	justify-content: center;
+
+	height: 300px;
+	background-size: cover;
+}
+
+/*---------------------*/
+/***** Ruby Effect *****/
+/*---------------------*/
 
 #dashboard h2, #dashboard p {
 	color: #fff;
+
 }
 
-.categories {
-	margin-top: 50px;
-	margin-bottom: 80px;
-}
-
-figure {
-	position: relative;
-	float: left;
-	overflow: hidden;
-	height: auto;
-	background: #000;
+#dashboard h2 {
+	margin-top: -6%;
 	text-align: center;
-	cursor: pointer;
 }
 
-figure img {
-	position: relative;
-	display: block;
-	min-height: 100%;
-	max-width: 100%;
-	opacity: 0.8;
-}
-
-figure figcaption {
-	padding: 2em;
-	color: #fff;
+#dashboard p {
+	font-size: 0.5em;
+	font-weight: 400;
+	font-family: 'Lato', 'Helvetica', 'Arial', sans-serif;
 	text-transform: uppercase;
-	font-size: 1.25em;
-	-webkit-backface-visibility: hidden;
-	backface-visibility: hidden;
 }
 
-figure figcaption::before,
-figure figcaption::after {
-	pointer-events: none;
-}
-
-figure figcaption,
-figure figcaption > a {
+.effect-ruby a {
 	position: absolute;
+	opacity: 0;
 	top: 0;
 	left: 0;
 	width: 100%;
 	height: 100%;
 }
 
-/* Anchor will cover the whole item by default */
-/* For some effects it will show as a button */
-figure figcaption > a {
-	z-index: 1000;
-	text-indent: 200%;
-	white-space: nowrap;
-	font-size: 0;
-	opacity: 0;
+div .effect-ruby {
+	/*opacity: 0.9;*/
+	-webkit-transition: background 0.35s, -webkit-transform 0.35s;
+	transition: background 0.35s, transform 0.35s;
 }
 
-figure h2 {
-	font-size: 50px;
-	word-spacing: -0.15em;
-	font-weight: 700;
+div .effect-ruby:hover {
+	/*opacity: 1;*/
+	-webkit-transform: scale(1.05);
+	transform: scale(1.05);
 }
 
-figure h2 span {
-	font-weight: 800;
-}
-
-figure h2,
-figure p {
-	margin: 0;
-}
-
-figure p {
-	letter-spacing: 1px;
-	font-size: 68.5%;
-}
-
-/*---------------*/
-/***** Ruby *****/
-/*---------------*/
-
-figure.effect-ruby {
-	background-color: #000;
-}
-
-figure.effect-ruby img {
-	opacity: 0.7;
-	-webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
-	transition: opacity 0.35s, transform 0.35s;
-	-webkit-transform: scale(1.15);
-	transform: scale(1.15);
-}
-
-figure.effect-ruby:hover img {
-	opacity: 0.5;
-	-webkit-transform: scale(1);
-	transform: scale(1);
-}
-
-figure.effect-ruby h2 {
+div .effect-ruby h2 {
 	margin-top: 20%;
 	-webkit-transition: -webkit-transform 0.35s;
 	transition: transform 0.35s;
@@ -232,48 +237,33 @@ figure.effect-ruby h2 {
 	transform: translate3d(0,20px,0);
 }
 
-figure.effect-ruby p {
-	margin: 1em 0 0;
-	padding: 3em;
-	border: 1px solid #F9BE46;
+div .effect-ruby p {
+	margin: 1.4em 0 0;
+	padding: 0.7em 2em;
+	border: 2px solid #F9BE46;
+	border-radius: 6px;
 	opacity: 0;
 	-webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
 	transition: opacity 0.35s, transform 0.35s;
+	-webkit-transition: background 0.55s, -webkit-transform 0.35s;
+	transition: background 0.55s, transform 0.35s;
 	-webkit-transform: translate3d(0,20px,0) scale(1.1);
 	transform: translate3d(0,20px,0) scale(1.1);
 } 
 
-figure.effect-ruby:hover h2 {
+div .effect-ruby:hover h2 {
 	-webkit-transform: translate3d(0,0,0);
 	transform: translate3d(0,0,0);
 }
 
-figure.effect-ruby:hover p {
+div .effect-ruby:hover p {
 	opacity: 1;
+	background: #F9BE46;
 	-webkit-transform: translate3d(0,0,0) scale(1);
 	transform: translate3d(0,0,0) scale(1);
 }
 
-
-
-/*    SOCKS    */
-
-.left {
-	display: block;
-	position: relative;
-   -webkit-align-self: flex-start;
-   align-self: flex-start;
-   position: relative;
-   top: -58px;
-}
-
-.back-text {
-	text-transform: uppercase;
-	margin-left: 84px;
-	font-size: 16px;
-	font-weight: 700;
-	color: #4A4A4A;
-}
+/*	PAGES SHARED STYLES  */
 
 .lead {
 	font-size: 18px;
@@ -290,22 +280,57 @@ figure.effect-ruby:hover p {
 	text-align: center;
 }
 
-#socks .orange-long {
+#category-page .orange-long {
 	background-color: #F9BE46;
 	color: #F9BE46;
 	height: 5px;
 	border: 0 none;
 }
 
-#socks h2 {
+#category-page h2 {
 	margin-top: 20%;
 	margin-bottom: 3%;
 }
 
-#socks h4 {
-	padding-top: 60px;
+#category-page h4 {
+	padding-top: 30px;
 	padding-bottom: 10px;
 }
+
+#category-page .btn-black {
+	background: #000000;
+	border: 1px solid #9B9B9B;
+	font-family: Lato, sans-serif;
+	font-size: 14px;
+	color: #FFFFFF;
+	line-height: 17px;
+	font-weight: 700;	
+	padding: 18px 50px;
+	border: none;
+	border-radius: 5px 5px 5px 5px;
+	cursor: pointer;
+	text-transform: uppercase;
+	text-decoration: none;
+}
+
+blockquote {
+	text-align: center;
+}
+
+.previous {
+	position: relative;
+	right: -8%;
+	text-transform: uppercase;
+	font-family: 'Lato', 'Helvetica', 'Arial', sans-serif
+}
+
+.previous {
+	font-size: 18px;
+}
+
+/*    SOCKS    */
+
+
 
 .form {
 	margin-top: 5%;
@@ -331,22 +356,6 @@ figure.effect-ruby:hover p {
 	margin-bottom: 10px;
 }
 
-#socks .btn-black {
-	background: #000000;
-	border: 1px solid #9B9B9B;
-	font-family: Lato, sans-serif;
-	font-size: 14px;
-	color: #FFFFFF;
-	line-height: 17px;
-	font-weight: 700;	
-	padding: 18px 50px;
-	border: none;
-	border-radius: 5px 5px 5px 5px;
-	cursor: pointer;
-	text-transform: uppercase;
-	text-decoration: none;
-}
-
 footer {
 	background: #eee;
 	padding: 40px 0 60px 0;
@@ -355,10 +364,6 @@ footer {
 footer blockquote {
 	width: 80%;
 	margin: 0 auto !important;
-}
-
-.typesettings blockquote > p {
-	font-size: .9em;
 }
 
 .author {
@@ -372,23 +377,55 @@ footer blockquote {
 	opacity: 0.4;
 }
 
-/*==========  Non-Mobile First Method  ==========*/
+/*==========  Media Queries  ==========*/
 
+/* Medium Devices, Desktops */
+@media (max-width : 992px) {
+
+	.panel {
+		height: 280px;
+	}
+
+	.categories .row {
+		margin-bottom: 30px;
+	}
+}
 
 /* Small Devices, Tablets */
-@media only screen and (max-width : 768px) {
+@media (max-width: 767px)  { 
 	
+	/*	DASHBOARD	Page  */
+
+	.dashboard-content {
+		padding: 0;
+	}
+
+	.dashboard-content .row {
+		margin-bottom: 0;
+	}
+
+	.container {
+		padding: 0;
+	}
 	.nav {
 		height: 80px;
+		width: 100%;
 	}
 
 	.nav-container {
-		height: 100px;
+		height: 80px;
 	}
 
 	.nav img {
 		height: 80px;
 	}
+
+	.panel {
+		height: 250px;
+	}
+
+		/*	Dashboard End	 */
+
 
 	.left {
 		top: -52px;
@@ -399,7 +436,7 @@ footer blockquote {
 		font-size: 13px;
 	}
 
-	#socks h2 {
+	#category-page h2 {
 		margin-top: 10%;
 		margin-bottom: 3%;
 	}
@@ -415,21 +452,28 @@ footer blockquote {
 		margin: 0 auto;
 	}
 
-	#socks .orange-long {
+	#category-page .orange-long {
 	width: 8%;
 	margin: 12px auto 28px auto;
 	}
 }
 
+
+
 /* Extra Small Devices, Phones */ 
-@media only screen and (max-width : 480px) {
+@media (max-width : 500px) { 
+	body {
+		margin-top: 0;
+	}
 
+/*	Dashboard Page  */
+
+	.panel {
+		height: 200px;
+	}
 }
 
-/* Custom, iPhone Retina */ 
-@media only screen and (max-width : 320px) {
-    
-}
+/*	Dashboard Page End  */
 
 
 
