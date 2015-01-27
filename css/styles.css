@@ -330,7 +330,9 @@ blockquote {
 
 /*    SOCKS    */
 
-
+.socks-form {
+	margin-top: -3%;
+}
 
 .form {
 	margin-top: 5%;
@@ -377,6 +379,47 @@ footer blockquote {
 	opacity: 0.4;
 }
 
+/*--Gloves--*/
+
+.gloves-form {
+	margin-top: -3%;
+
+}
+
+.label-description {
+	font-size: 80%;
+	font-style: italic;
+	font-weight: normal;
+	vertical-align: text-bottom;
+	color: #888;
+}
+
+/*--Gloves End--*/
+
+/*--Breeches--*/
+
+.breeches-form {margin-top: -4%;}
+
+.submit-button {
+	margin-top: 7%;
+}
+
+/*--Breeches End--*/
+
+
+
+/*--Belts--*/
+
+.belts-form {margin-top: -10%;}
+
+/*--Belts End--*/
+
+/*--Tops & Outerwear--*/
+
+.tops-outerwear-form {margin-top: -7%;}
+
+/*--Tops & Outerwear END--*/
+
 /*==========  Media Queries  ==========*/
 
 /* Medium Devices, Desktops */
@@ -389,12 +432,17 @@ footer blockquote {
 	.categories .row {
 		margin-bottom: 30px;
 	}
+
+	.product-form {
+		margin-top: -13%;
+
+	}
 }
 
 /* Small Devices, Tablets */
 @media (max-width: 767px)  { 
 	
-	/*	DASHBOARD	Page  */
+	/*	DASHBOARD  */
 
 	.dashboard-content {
 		padding: 0;
@@ -402,6 +450,10 @@ footer blockquote {
 
 	.dashboard-content .row {
 		margin-bottom: 0;
+	}
+
+	.nav-dashboard {
+	height: 78px;
 	}
 
 	.container {
@@ -420,21 +472,27 @@ footer blockquote {
 		height: 80px;
 	}
 
+	.product-form {
+		margin-top: 0;
+
+	}
+
+	.previous {
+		font-size: 25px;
+		font-weight: bold;
+	}
+
+	
+
+	.remove-me {
+		display: none;
+	}
+
 	.panel {
 		height: 250px;
 	}
 
 		/*	Dashboard End	 */
-
-
-	.left {
-		top: -52px;
-	}
-
-	.back-text {
-		margin-left: 10%;
-		font-size: 13px;
-	}
 
 	#category-page h2 {
 		margin-top: 10%;
