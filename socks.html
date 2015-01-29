@@ -48,80 +48,88 @@
       </div> 
     </div>
 
-    <section id="sizing-section">
-      <div class="row" style="margin-bottom: 80px;">
-        <div class="col-sm-10 col-sm-offset-1">
-          <h4 class="text-center">Fill Out Below</h4>
-          <hr class="orange-long">
-        </div>
-        <div class="col-sm-5 col-sm-offset-1 gif">
-          <img class="img-responsive" src="images/sizing-gif.gif">            
-        </div>
-        <div class="col-sm-5 form">
-          <div class="socks-form product-form">
-            <form>
-              <div class="form-group">
-                <label><h5>Shoe Size</h5></label>
-                <select class="form-control input-lg">
-                  <option>6</option>
-                  <option>7</option>
-                  <option>8</option>
-                  <option>9</option>
-                  <option>10</option>
-                  <option>11</option>
-                  <option>12</option>
-                  <option>13</option>
-                  <option>R</option>
-                  <option>W</option>
-                </select>
-              </div>
-              <div class="radio">
-                <label>
-                  <input type="radio" name="optionsGender" id="genderMale" value="mens"><p>Mens</p> 
-                </label>
-              </div>
-              <div class="radio" style="margin-bottom: 20px;">
-                <label>
-                  <input type="radio" name="optionsGender" id="genderFemale" value="womens"><p>Womens</p> 
-                </label>
-              </div>
-              <a class="btn-black center-button" href="#">Find My Size</a>
-            </form>
+    <section id="sizing-container">
+      <section id="sizing-section">
+        <div class="row" style="margin-bottom: 80px;">
+          <div class="col-sm-10 col-sm-offset-1">
+            <h4 class="text-center">Fill Out Below</h4>
+            <hr class="orange-long">
+          </div>
+          <div class="col-sm-5 col-sm-offset-1 gif">
+            <img class="img-responsive" src="images/sizing-gif.gif">            
+          </div>
+          <div class="col-sm-5 form">
+            <div class="socks-form product-form">
+              <form id="sizingSocks">
+                <div class="form-group">
+                  <label for="shoeSize"><h5>Shoe Size</h5></label>
+                  <select id="shoeSize" name="shoeSize" class="form-control input-lg" required>
+                    <option value="">Please select</option>
+                    <option>6</option>
+                    <option>7</option>
+                    <option>8</option>
+                    <option>9</option>
+                    <option>10</option>
+                    <option>11</option>
+                    <option>12</option>
+                    <option>13</option>
+                    <option>R</option>
+                    <option>W</option>
+                  </select>
+                </div>
+                <div class="radio">
+                  <label>
+                    <input type="radio" name="optionsGender" id="genderMale" value="mens" required><p>Mens</p> 
+                  </label>
+                </div>
+                <div class="radio" style="margin-bottom: 20px;">
+                  <label>
+                    <input type="radio" name="optionsGender" id="genderFemale" value="womens"><p>Womens</p> 
+                  </label>
+                </div>
+                <button type="submit" class="btn-black center-button">Find My Size</button>
+              </form>
+            </div>
+          </div>
+        </div> <!-- Row END -->
+      </section> <!-- Sizing section END -->
+     
+     <section id="loader">
+       <div class="center-vertical">
+         <img src="images/loader.gif">
+         <h5>Calculating the perfect fit...</h5>
+       </div>
+     </section> <!-- PreLoader Section END -->      
+
+      <section id="results-section">
+        <div class="row" style="margin-bottom: 20px;">
+          <div class="col-sm-10 col-sm-offset-1">
+            <h4 class="text-center">The results are in...</h4>
+            <h2 class="text-center">Your size is <span class="size"></span></h2>
           </div>
         </div>
-      </div> <!-- Row END -->
-    </section> <!-- Sizing section END -->
-
-    <section id="results-section">
-      <div class="row" style="margin-bottom: 20px;">
-        <div class="col-sm-10 col-sm-offset-1">
-          <h4 class="text-center">The results are in...</h4>
-          <h2 class="text-center">Your size is </h2>
-        </div>
-      </div>
-      <div class="row" style="width: 95%; margin: 0 auto;">
-        <div class="col-sm-4">
-          <img class="hidden-xs img-responsive" src="images/sizing-gif.gif">   
-        </div>
-        <div class="col-sm-4">
-          <img class="hidden-xs img-responsive" src="images/sizing-gif.gif">   
-        </div>
-        <div class="col-sm-4">
-          <img class="hidden-xs img-responsive" src="images/sizing-gif.gif">   
-        </div>     
-      </div>
-      <div class="row" style="margin-top: 5%; margin-bottom: 10%;">
-        <div class="col-sm-12">
-          <div class="center-align">
-            <a class="btn-black btn-results" href="#">Shop Socks</a>
+        <div class="row" style="width: 95%; margin: 0 auto;">
+          <div class="col-sm-4">
+            <img class="hidden-xs img-responsive" src="images/sizing-gif.gif">   
           </div>
+          <div class="col-sm-4">
+            <img class="hidden-xs img-responsive" src="images/sizing-gif.gif">   
+          </div>
+          <div class="col-sm-4">
+            <img class="hidden-xs img-responsive" src="images/sizing-gif.gif">   
+          </div>     
         </div>
-        
-      </div>
-
+        <div class="row" style="margin-top: 5%; margin-bottom: 10%;">
+          <div class="col-sm-12">
+            <div class="center-align">
+              <a class="btn-black btn-results" href="http://www.nobleoutfitters.com/collections/socks">Shop Socks</a>
+            </div>
+          </div>   
+        </div>
+      </section> <!-- Results section END -->
       
+    </section> <!-- Sizing Container END -->
 
-    </section> <!-- Results section END -->
 
     <div class="row">
       <div class="col-xs-12">

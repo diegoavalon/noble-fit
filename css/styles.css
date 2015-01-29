@@ -19,6 +19,26 @@ a:hover {
 	text-decoration: none;
 }
 
+.center-vertical {
+	display: -webkit-flex;
+	display: flex;
+	-webkit-flex-direction: column;
+    flex-direction: column;
+    -webkit-align-items: center;
+    align-items: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+}
+
+.center-align {
+	display: flex;
+	display: -webkit-flex;
+	flex-direction: row;
+	-webkit-flex-direction: row;
+	justify-content: center;
+	-webkit-justify-content: center;
+}
+
 /*	TYPESETTINGS OVERRIDES	*/
 
 .typesettings {
@@ -297,8 +317,14 @@ div .effect-ruby:hover p {
 	padding-bottom: 10px;
 }
 
-#sizing-section {
-	min-height: 600px;
+#sizing-container, .center-vertical {
+	min-height: 540px;
+}
+
+.size {
+	color: #F9BE46;
+	text-transform: uppercase;
+	border-bottom: 4px solid #222222; 
 }
 
 .form {
@@ -330,6 +356,7 @@ div .effect-ruby:hover p {
 	font-size: 16px;
 	letter-spacing: 1px;
 	color: #222222;
+	background: #fff;
 	line-height: 17px;
 	font-weight: 700;	
 	padding: 18px 50px;
@@ -351,15 +378,6 @@ div .effect-ruby:hover p {
 .btn-results {
 	color: #ffffff !important;
 	background: #222222;
-}
-
-.center-align {
-	display: flex;
-	display: -webkit-flex;
-	flex-direction: row;
-	-webkit-flex-direction: row;
-	justify-content: center;
-	-webkit-justify-content: center;
 }
 
 blockquote {
